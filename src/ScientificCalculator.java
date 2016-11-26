@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Scanner;
 import java.util.Stack;
 
 import javax.script.ScriptEngine;
@@ -10,10 +11,10 @@ import javax.script.ScriptException;
 public class ScientificCalculator {
 
 	public static void main(String[] args) {
-
+		Scanner sc = new Scanner(System.in);
 		squareRoot(2);
-
-		String exp = "4 + 2 / 4 + cos(0)";
+		System.out.print("Enter expression: ");
+		String exp = sc.nextLine();
 
 		Queue<String> queueOperator = new LinkedList<String>();
 		Queue<String> queueNumber = new LinkedList<String>();
